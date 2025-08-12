@@ -25,7 +25,7 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartments()
         {
 
-            return await _context.Departments.ToListAsync();
+            return await _context.Departments.Include(e => e.Employees).ToListAsync();
         }
 
         // GET: api/Departments/5

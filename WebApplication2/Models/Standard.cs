@@ -7,6 +7,6 @@ namespace WebApplication2.Models
         public int StandardId { get; set; }
         public string StandardName { get; set; }
         public string Description { get; set; }
-        public ICollection<Student>? Students { get; set; }
+        public List<Student>? Students { get; set; }
     }
 }

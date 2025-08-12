@@ -1,3 +1,6 @@
+using CodeFirstApproach.Interface;
+using CodeFirstApproach.Repository;
+using CodeFirstApproach.Service;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
 
@@ -10,6 +13,12 @@ builder.Services.AddControllers().AddNewtonsoftJson(opt => { opt.SerializerSetti
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EfCodeFirstContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("NewConnection")));
+
+builder.Services.AddScoped<IStudentRepository,StudentService>();
+builder.Services.AddScoped<IStandardRepository,StandardService>();
+
+//builder.Services.AddScoped<StudentService>();
+//builder.Services.AddScoped<StandardService>();
 
 var app = builder.Build();
 
