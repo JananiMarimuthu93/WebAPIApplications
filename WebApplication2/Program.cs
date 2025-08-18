@@ -1,5 +1,4 @@
 using CodeFirstApproach.Interface;
-using CodeFirstApproach.Repository;
 using CodeFirstApproach.Service;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
