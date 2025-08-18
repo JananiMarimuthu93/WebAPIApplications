@@ -1,0 +1,6 @@
+@ManyToManyApi_HostAddress = http://localhost:5029
+
+GET {{ManyToManyApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
